@@ -1,0 +1,966 @@
+@font-face
+{
+    font-family: 'bk';
+    src: url("../font/bk.ttf");
+}
+
+
+
+@font-face
+{
+    font-family: 'en';
+    src: url("../font/en.otf");
+}
+
+
+
+
+
+*
+{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    font-family: 'bk' !important;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+
+
+body
+{
+    background: #fbfbfc;
+    /*background: #FFFFFF;*/
+}
+
+
+
+
+
+*::selection
+{
+    display: none !important;
+    outline: none !important;
+    background: transparent !important;
+}
+
+
+
+
+
+*::-webkit-scrollbar
+{
+    background: #ECD08F;
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+html
+{
+    -webkit-tap-highlight-color:transparent;
+}
+
+
+
+
+
+#Header
+{
+    width: 100%;
+    height: 50px;
+    background: #ECD08F;
+    /*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
+}
+
+
+
+#Header_Image
+{
+    height: 40px;
+    margin: 5px;
+}
+
+
+
+
+.Main_Content
+{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+
+
+
+.item
+{
+
+    height: 280px;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    outline: none !important;
+    margin: 10px;
+}
+
+
+
+
+.item>.bg-img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+
+
+
+.item>.bg-img>h3
+{
+    float: right;
+    padding: 0px 20px 0px 20px;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+
+
+
+
+.STANDARD_TEXT_STYLE
+{
+    direction: rtl;
+    text-align: right;
+    margin: 12px;
+}
+
+
+
+
+
+
+
+
+
+/*----------------------------------------Panle CSS Start------------------------------------*/
+
+#MAIN_DIV_PANLE
+{
+    width: 100%;
+    height: 500px;
+    margin: 5% 0 0 0;
+}
+
+
+#HEADER_PANLE
+{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+
+
+/******************************************Menu Start***********************************************/
+#MENU_PANLE
+{
+    width: 250px;
+    height: 110%;
+    background: #ECD08F;
+    overflow: hidden;
+    float: right;
+    padding: 25px 0px 25px 0px !important;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+
+#MENU_PANLE>ul>li>center>img
+{
+    width: 120px;
+    padding: 25px 0px 50px 0px !important;
+}
+
+
+
+#MENU_PANLE>ul
+{
+    width: 100%;
+    direction: rtl;
+    display: inline-list-item;
+    position: relative;
+}
+
+#MENU_PANLE>ul>li
+{
+    width: 100%;
+    height: 42px;
+    list-style: none;
+}
+
+
+#MENU_PANLE>ul>li>a
+{
+    width: 100%;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #ECD08F;
+    font-size: 16px;
+    position: absolute !important;
+    text-align: center;
+}
+
+
+
+
+#MENU_PANLE>ul>li>a:hover
+{
+cursor: pointer;
+/*background: #102030;*/
+/*color: #CCCCCC;*/
+/*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
+transform: scale(1.2);
+/*background: #cc754e;*/
+transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+
+#PANLE_HEADER_IMAGE
+{
+height: 170px !important;
+border-radius: 500px;
+}
+
+
+#PANLE_HEADER_MOBILE
+{
+display: none;
+
+}
+
+
+@media screen and (min-width: 1024px)
+{
+    #MENU_PANLE
+{
+    width: 250px !important;
+    display: block !important;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+    #PANLE_HEADER_IMAGE
+{
+    display: block;
+}
+
+    #MENU_PANLE
+{
+    height: 110% !important;
+}
+
+    #PANLE_HEADER_MOBILE
+{
+    display: none;
+}
+}
+
+
+
+@media screen and (max-width: 1024px)
+{
+
+
+    #MENU_PANLE
+{
+    height: auto !important;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+    #PANLE_HEADER_MOBILE
+{
+    width: 100%;
+    display: block;
+}
+
+
+    #PANLE_HEADER_IMAGE
+{
+    display: none;
+}
+
+
+    #HEADER_MOBILE_PANLE
+{
+    width: 400px;
+    height: 70px;
+    background: #ECD08F;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+}
+
+
+    #HEADER_MOBILE_PANLE>img
+{
+    width: 50px;
+    height: 50px;
+    margin-top: 8px !important;
+}
+
+
+    #MENU_PANLE
+{
+    width: 100% !important;
+    display: none;
+    box-shadow: none;
+}
+
+
+
+    .COMBOBOX
+{
+    margin-top: 60px !important;
+}
+
+
+}
+/******************************************Menu End***********************************************/
+
+
+
+
+#UserName_PANLE,#PassWord_PANLE {
+width: 350px;
+border: solid 1px #CCC;
+height: 40px;
+padding: 10px;
+outline: none;
+border-radius: 20px;
+text-align: center;
+font-size: 14px;
+}
+
+#Submit_PANLE
+{
+width: 350px;
+border: none;
+height: 45px;
+padding: 10px;
+outline: none;
+border-radius: 20px;
+text-align: center;
+font-size: 16px;
+color: #FFF;
+background: #ECD08F;
+margin: 0 30px 0 30px !important;
+}
+
+#Submit_PANLE:hover,.DELETE_BTN:hover
+{
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+
+.DELETE_BTN
+{
+width: 350px;
+border: none;
+height: 45px;
+padding: 7px 55px 7px 55px !important;
+outline: none;
+border-radius: 20px;
+text-align: center;
+font-size: 16px;
+color: #FFF;
+background: #d50000;
+margin: 0 30px 0 30px !important;
+text-decoration: none;
+font-family: B-koodak;
+}
+
+
+
+#BOTTOM_TEXT_PANLE
+{
+color: #666666;
+text-align: center;
+font-size: 12px !important;
+}
+
+
+
+.INPUT-TEXT
+{
+margin-top: 14px !important;
+width: 320px;
+border: solid 1px #CCC;
+height: 35px;
+padding: 10px;
+outline: none;
+border-radius: 20px;
+text-align: center;
+font-size: 12px;
+}
+
+
+.INPUT-TEXT:focus
+{
+transition: all 0.3s ease-in-out;
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+.COMBOBOX:focus
+{
+transition: all 0.3s ease-in-out;
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+.HTML_EDITOR
+{
+
+}
+
+
+
+
+/*----------------------------------------POST CSS Start------------------------------------*/
+#NEW_POST_INTERNAL_PANLE
+{
+width: 100%;
+height: 500px;
+}
+
+.CHOSEE_FILE_INPUT_BUTTON
+{
+display: none;
+}
+
+.FILE_LABLE
+{
+cursor: pointer;
+width: 150px;
+height: 25px;
+padding: 3px 5px 7px 5px;
+background: #ECD08F;
+display: table;
+color: #fff;
+border-radius: 20px;
+position: relative;
+margin-top: 14px;
+}
+
+
+
+.FILE_LABLE:hover
+{
+transition: all 0.3s ease-in-out;
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+
+.FILE_LABLE_TEXT_P
+{
+margin-top: 5px !important;
+}
+
+
+
+#summernote
+{
+width: 350px;
+}
+
+
+
+.note-toolbar
+{
+height: 30px !important;
+}
+
+
+.note-toolbar>div>button
+{
+padding: 2.5px !important;
+margin: 2.5px !important;
+}
+
+
+.COMBOBOX
+{
+width: 320px;
+height: 30px;
+border-radius: 20px;
+border: solid 1px #CCC;
+padding: 0px 5px 0px 5px !important;
+outline: none;
+direction: rtl !important;
+font-size: 12px;
+}
+
+.TEXTAREA
+{
+width: 95% !important;
+height: 300px!important;
+outline: none;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+border: solid 1px #CCC;
+padding: 15px!important;
+font-size: 12px;
+}
+
+#From_NEW_POST
+{
+padding: 14px !important;
+}
+/*----------------------------------------POST CSS End------------------------------------*/
+/*----------------------------------------ITEM CSS Start------------------------------------*/
+
+#From_NEW_ITEM
+{
+padding: 14px !important;
+}
+
+#NEW_ITEM_INTERNAL_PANLE
+{
+width: 100%;
+height: 500px;
+}
+
+#UPLOAD_FILE_PANLE_INTERNAL
+{
+width: 100%;
+}
+
+.LINK_UPLOAD_FILES
+{
+margin: 25px !important;
+}
+
+.TABLE>tr,.TABLE>td,.TABLE>th,td>a,td>p
+{
+padding: 0px 30px 0px 30px !important;
+}
+
+.table th
+{
+text-align: center !important;
+}
+
+.LINK_UPLOAD_FILES_A_TAG
+{
+width: 150px !important;
+}
+
+.TABLE
+{
+/*margin: 15px 50px 50px 50px !important;*/
+}
+
+#FILE_LABLE_UPLOAD_FILE_PANLE
+{
+margin-top: 50px !important;
+}
+
+.LINK_UPLOAD_FILES>p
+{
+cursor: pointer;
+}
+
+.fr-toolbar.fr-top
+{
+height: 70px !important;
+}
+
+.fr-box .fr-counter
+{
+display: none;
+}
+
+#logo
+{
+display: none;
+}
+
+.MY_WEB_MATRIAL_BORDER_INTERNAL
+{
+border: solid 1px #CCC;
+border-radius: 10px;
+width: 100%;
+padding: 10px;
+background: #FFF;
+}
+
+.MY_WEB_MATRIAL_BORDER_INTERNAL
+{
+direction: rtl;
+}
+
+.MY_WEB_MATRIAL_BORDER_INTERNAL>input,.MY_WEB_MATRIAL_BORDER_INTERNAL>select
+{
+display: inline-flex;
+margin: 0px 50px 40px 50px;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+color: #727272;
+}
+
+.MY_WEB_MATRIAL_BORDER
+{
+width: 70%;
+margin: 0px 25px 0px 25px;
+padding: 10px;
+}
+
+.PROFILE_BORDER
+{
+width: 70%;
+margin: 0px 25px 0px 25px;
+padding: 10px;
+}
+
+.PROFILE_IMAGE_BORDER
+{
+border: solid 1px #CCC;
+border-radius: 10px;
+width: 100%;
+padding: 10px;
+background: #FFF;
+}
+
+.PROFILE_USERS_BORDER
+{
+border: solid 1px #CCC;
+border-radius: 10px;
+width: 100%;
+padding: 10px;
+background: #FFF;
+}
+
+.PROFILE_USERS_RADIO
+{
+margin: 0px 0px 0px 20px
+}
+
+
+@media screen and (max-width: 1024px)
+{
+    .PROFILE_BORDER
+{
+    margin: 0 auto;
+    width: 80%;
+}
+
+    .MY_WEB_MATRIAL_BORDER
+{
+    margin: 0 auto;
+    width: 80%;
+}
+
+
+    .PROFILE_IMAGE_BORDER
+{
+    padding: 0px;
+}
+
+    .MY_WEB_MATRIAL_BORDER_INTERNAL
+{
+    padding: 0px;
+}
+
+    .PROFILE_USERS_BORDER
+{
+    padding: 0px;
+}
+}
+
+
+.FILE_LABLE_PROFILE
+{
+width: 125px;
+height: 125px;
+cursor: pointer;
+background: #ECD08F;
+display: table;
+color: #fff;
+position: relative;
+border-radius: 10px;
+}
+
+#Submit_PANLE_PROFILE
+{
+width: 125px;
+border: none;
+height: 30px;
+outline: none;
+border-radius: 10px;
+text-align: center;
+font-size: 14px;
+color: #FFF;
+background: #ECD08F;
+margin: 10px auto;
+padding: 0px 0px 1px 0px;
+}
+
+#Submit_PANLE_PROFILE:hover
+{
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.PROFILE_IMAGE_BORDER>from>p
+{
+margin: 0 auto;
+padding-bottom: 10px;
+}
+
+.USER_TABLE>tr,.USER_TABLE>td,.USER_TABLE>th,td>a,td>p
+{
+padding: 0px 30px 0px 30px !important;
+}
+
+.USER_TABLE th
+{
+text-align: center !important;
+}
+
+#USER_PANLE_TABLE
+{
+overflow-x: scroll;
+direction: revert;
+}
+
+#USER_PANLE_TABLE::-webkit-scrollbar
+{
+background: #CCC;
+height: 3px;
+}
+
+#USER_PANLE_TABLE::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+border-radius: 10px;
+}
+
+#USER_PANLE_TABLE::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.SHOWDOW
+{
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.SHOWDOW_BORDER
+{
+box-shadow: 0 2px 6px 0 rgba(0,0,0,.04);
+}
+
+.TODAY_SEEIN
+{
+width: 270px;
+height: 125px;
+background: #FFF;
+/*border-radius: 2px;*/
+border: solid 1px #CCC;
+border-radius: 10px;
+display: inline-flex;
+margin: 20px;
+}
+/*----------------------------------------ITEM CSS End------------------------------------*/
+
+
+
+.NEW_IMAGE_DIALOG
+{
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.7);
+z-index: 99999;
+top: 0;
+position: fixed;
+display: none;
+}
+
+
+
+.NEW_IMAGE_DIALOG_INTERNAL
+{
+width: 100%;
+height: 100%;
+position: relative;
+}
+
+
+
+.NEW_IMAGE_DIALOG_INTERNAL_DIALOG
+{
+width: 100%;
+position: absolute;
+top: 40%;
+}
+
+
+.NEW_IMAGE_DIALOG_INTERNAL_DIALOG_CONTENT
+{
+width: 60%;
+background: #FFF;
+border-radius: 10px;
+padding: 10px;
+}
+
+
+
+.UPDATE_IMAGE_DIALOG
+{
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.7);
+z-index: 99999;
+top: 0;
+position: fixed;
+display: none;
+}
+
+
+
+.UPDATE_IMAGE_DIALOG_INTERNAL
+{
+width: 100%;
+height: 100%;
+position: relative;
+}
+
+
+
+.UPDATE_IMAGE_DIALOG_INTERNAL_DIALOG
+{
+width: 100%;
+position: absolute;
+top: 45%;
+}
+
+
+.UPDATE_IMAGE_DIALOG_INTERNAL_DIALOG_CONTENT
+{
+width: 60%;
+background: #FFF;
+border-radius: 10px;
+padding: 10px;
+}
+
+
+
+#DONE_BUTTON_NEW_TEXT_NEW_POST
+{
+cursor: pointer;
+padding: 5px 20px 5px 20px;
+background: #1b5e20;
+margin: 20px;
+border-radius: 10px;
+color: #FFFFFF;
+}
+
+
+#CANCEL_BUTTON_NEW_TEXT_NEW_POST
+{
+cursor: pointer;
+padding: 5px 20px 5px 20px;
+background: #d50000;
+margin: 20px;
+border-radius: 10px;
+color: #FFFFFF;
+}
+
+
+
+
+#DONE_BUTTON_UPDATE_TEXT_UPDATE_POST
+{
+cursor: pointer;
+padding: 5px 20px 5px 20px;
+background: #1b5e20;
+margin: 20px;
+border-radius: 10px;
+color: #FFFFFF;
+}
+
+
+#CANCEL_BUTTON_UPDATE_TEXT_UPDATE_POST
+{
+cursor: pointer;
+padding: 5px 20px 5px 20px;
+background: #d50000;
+margin: 20px;
+border-radius: 10px;
+color: #FFFFFF;
+}
+
+
+
+
+
+.Dialog_input_text
+{
+width: 100%;
+text-align: center;
+padding: 10px;
+border: none;
+font-family: 'en' !important;
+z-index: 99999999;
+outline: none;
+}
+
+
+.HTML_EDITOR_MENU
+{
+height: 30px;
+background: #CCCCCC;
+width: 95%;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+}
+
+
+/*----------------------------------------Panle CSS End------------------------------------*/
+
+
+
